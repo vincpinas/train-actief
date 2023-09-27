@@ -1,0 +1,42 @@
+@import "../../scss/mixins";
+
+.c-nav {
+    position: fixed;
+    display: flex;
+    width: 100%;
+    z-index: $index-3;
+
+    &__header {
+        padding: 2rem 0rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        @include font--primary(300);
+
+        & > ul {
+            display: flex;
+            position: absolute;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            width: 100%;
+        }
+    
+        & > ul li:not(:last-of-type) {
+            margin-right: 2rem;
+        }
+
+        &Logo {
+            margin-left: 7rem;
+            margin-bottom: 0;
+        }
+    }
+
+    @media #{$mobile-down} {
+        &__headerLogo {
+            display: none;
+            margin: none;
+        }
+    }
+}

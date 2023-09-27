@@ -1,0 +1,89 @@
+@mixin slide-in($duration: 1000ms, $direction: "top", $delay: 0ms, $opacity: 0) {
+    @keyframes slide-in-left {
+        from {
+            transform: translateX(100%);
+            opacity: $opacity;
+        }
+
+        to {
+            transform: translateX(0px);
+            opacity: 1;
+        }
+    }
+
+    @keyframes slide-in-right {
+        from {
+            transform: translateX(-100%);
+            opacity: $opacity;
+        }
+
+        to {
+            transform: translateX(0px);
+            opacity: 1;
+        }
+    }
+
+    @keyframes slide-in-top {
+        from {
+            transform: translateY(-100%);
+            opacity: $opacity;
+        }
+
+        to {
+            transform: translateY(0px);
+            opacity: 1;
+        }
+    }
+
+    @keyframes slide-in-bottom {
+        from {
+            transform: translateY(100%);
+            opacity: $opacity;
+        }
+
+        to {
+            transform: translateY(0px);
+            opacity: 1;
+        }
+    }
+
+    opacity: $opacity;
+
+    @if $direction =="left" {
+        transform: translateX(100%);
+        animation: slide-in-left $duration $delay forwards;
+    }
+
+    @else if $direction =="right" {
+        transform: translateX(-100%);
+        animation: slide-in-right $duration $delay forwards;
+    }
+
+    @else if $direction =="top" {
+        transform: translateY(-100%);
+        animation: slide-in-top $duration $delay forwards;
+    }
+
+    @else if $direction =="bottom" {
+        transform: translateY(100%);
+        animation: slide-in-bottom $duration $delay forwards;
+    }
+
+    @else {
+        @error "Unknown direction #{$direction}.";
+    }
+}
+
+@mixin slide-in-all($range, $stagger: 200ms, $delay: 0ms, $duration: 1000ms, $direction: "top", $opacity: 0) {
+    @for $i from 1 through $range {
+         & > div:nth-of-type(#{$i}),
+         & > span:nth-of-type(#{$i}),
+         & > li:nth-of-type(#{$i})
+        {
+            @include slide-in($duration: $duration,
+                $direction: $direction,
+                $delay: $i*$stagger + $delay,
+                $opacity: $opacity );
+        }
+    }
+}

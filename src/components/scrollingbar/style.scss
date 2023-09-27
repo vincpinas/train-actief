@@ -1,0 +1,17 @@
+@import "../../scss/variables";
+
+.c-scrollingbar {
+    padding: 1rem;
+    background: $special-primary;
+    display: flex;
+    width: fit-content;
+    text-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+
+    h2 {
+        margin: 0;
+        margin-left: 0.5rem;
+        color: $black;
+    }
+}
