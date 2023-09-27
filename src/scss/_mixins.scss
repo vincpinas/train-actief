@@ -146,5 +146,12 @@
     background: none;
     border-radius: 20px;
     background-color: $special-primary;
-    @include font--primary(600)
+    color: $black;
+    @include font--primary(600);
+    transition: $transition-fast;
+    border: none;
+
+    &:hover {
+        color: $white;
+    }
 }

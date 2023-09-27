@@ -14,8 +14,9 @@
         z-index: $index-2;
 
         @media #{$mobile-down} {
-            margin-left: 2rem;
-            max-width: 16rem;
+            padding: 0rem 2rem;
+            max-width: 30rem;
+            margin: 0;
         }
 
         a {

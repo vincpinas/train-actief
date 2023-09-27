@@ -33,7 +33,7 @@
         }
     }
 
-    @media #{$mobile-down} {
+    @media #{$tablet-down} {
         &__headerLogo {
             display: none;
             margin: none;

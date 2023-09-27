@@ -1,0 +1,52 @@
+@import "../../scss/variables";
+@import "../../scss/mixins";
+
+.c-contact {
+    margin-top: 5rem;
+    display: flex;
+    padding: 0rem 7rem;
+    flex-wrap: wrap;
+
+    @media #{$mobile-down} {
+        padding: 2rem;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        min-width: 25rem;
+        margin-right: 6rem;
+
+        @media #{$mobile-down} {
+            margin: 0;
+        }
+
+        input, textarea {
+            border: 2px solid $white;
+            background: none;
+            border-radius: 3px;
+            color: $white;
+        }
+        
+        button {
+            @include gbutton;
+            margin-top: 1rem;
+        }
+    }
+
+    &__info {
+        img {
+            margin-bottom: 1rem;
+        }
+
+        ul p {
+            margin: 0
+        }
+
+        a {
+            @include paragraph;
+        }
+    }
+}

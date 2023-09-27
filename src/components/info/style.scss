@@ -1,0 +1,15 @@
+@import "../../scss/variables";
+
+.c-info {
+    padding: 2rem 7rem;
+
+    @media #{$normal} {
+        p {
+            max-width: 40rem;
+        }
+    }
+
+    @media #{$mobile-down} {
+        padding: 2rem;
+    }
+}

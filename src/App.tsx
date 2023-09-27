@@ -3,6 +3,8 @@ import Navigation from './components/navigation'
 import Hero from './components/hero'
 import ScrollingBar from './components/scrollingbar'
 import Supporters from './components/support'
+import Info from './components/info'
+import Contact from './components/contact'
 
 function App() {
   return (
@@ -11,6 +13,8 @@ function App() {
       <Hero />
       <ScrollingBar />
       <Supporters />
+      <Info />
+      <Contact />
     </>
   )
 }

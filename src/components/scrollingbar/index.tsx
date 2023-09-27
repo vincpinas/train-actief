@@ -27,7 +27,7 @@ function index() {
             },
         })
             .to(".c-scrollingbar", {
-                translateX: "-20%"
+                translateX: "-23%"
             })
 
         return () => {
