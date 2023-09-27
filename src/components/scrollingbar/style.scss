@@ -13,5 +13,7 @@
         margin: 0;
         margin-left: 0.5rem;
         color: $black;
+        white-space: nowrap;
+        text-wrap: nowrap;
     }
 }
