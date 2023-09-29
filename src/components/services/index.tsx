@@ -1,5 +1,4 @@
 import './style.scss'
-import { AiOutlineArrowLeft, AiOutlineArrowRight } from 'react-icons/ai'
 import Card from './card'
 
 import p1 from '../../assets/promo/1.jpeg'
