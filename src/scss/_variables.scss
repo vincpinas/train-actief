@@ -5,6 +5,7 @@ $special-primary: #93B239;
 
 // Named Colors
 $background: $black;
+$background-secondary: lighten($background, 6%);
 $text-primary: $white;
 
 // Fonts
@@ -109,7 +110,7 @@ $transition-normal: 0.55s;
 $transition-slow: 0.75s;
 
 // Border radius
-$border-radius--primary: 100%;
+$border-radius--primary: 10px;
 $border-radius--secondary: 7px;
 
 // Shadows

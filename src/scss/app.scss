@@ -50,7 +50,8 @@ body {
     button,
     a,
     input,
-    select {
+    select,
+    textarea {
         @include input;
     }
 
@@ -82,7 +83,7 @@ body {
         @include label;
     }
 
-    .-cspec {
+    .-special {
         color: $special-primary;
     }
 }

@@ -1,0 +1,117 @@
+@import '../../scss/variables';
+@import '../../scss/mixins';
+
+.c-services {
+    margin-top: 5rem;
+    padding: 0rem 7rem;
+
+    @media #{$mobile-down} {
+        margin-top: 2rem;
+        padding: 2rem;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__heading {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &Arrows > svg {
+            border: 1px solid $white;
+            font-size: 2em;
+            border-radius: $border-radius--primary;
+            transition: $transition-fast;
+        }
+
+        &Arrows > svg:hover {
+            color: $special-primary;
+            border-color: $special-primary;
+        }
+
+        &Arrows > svg:not(:last-of-type) {
+            margin-right: 1.2rem;
+        }
+    }
+
+    ul {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        flex-wrap: wrap;
+    }
+
+    ul li {
+        display: flex;
+        flex-direction: column;
+    }
+
+    ul li > p {
+        font-weight: 500;
+    }
+
+    ul li button {
+        margin-top: 0.5rem;
+        background-color: $special-primary;
+        border: none;
+        padding: 0.75rem 4rem;
+        border-radius: $border-radius--primary;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        font-weight: 600;
+        color: $black;
+        transition: $transition-fast;
+
+        &:hover {
+            color: $white;
+        }
+    }
+}
+
+.c-servicecard {
+    width: 15rem;
+    height: 20rem;
+    display: flex;
+    flex-direction: column;
+    border-radius: $border-radius--primary;
+    background-color: $background-secondary;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+
+    & > *:not(img) {
+        z-index: $index-2;
+    }
+    
+    img {
+        position: absolute;
+        height: 24rem;
+        transition: $transition-fast;
+    }
+    
+    &:hover img {
+        height: 26rem;
+    }
+
+    &__overlay {
+        width: inherit;
+        height: inherit;
+        position: absolute;
+        background-color: rgba($black, $alpha: .6);
+        transform: translateY(100%);
+        transition: $transition-fast;
+        z-index: $index-1 !important;
+        padding: 1rem 1.2rem;
+    }
+
+    &__overlay p {
+        @include input;
+    }
+
+    &:hover &__overlay {
+        transform: translateY(0%) !important;
+    }
+}

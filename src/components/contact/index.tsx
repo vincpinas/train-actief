@@ -3,12 +3,12 @@ import logo from '../../assets/Logo.svg'
 
 function index() {
     return (
-        <div className='c-contact'>
+        <div className='c-contact' id='contact'>
             <form className="c-contact__form">
                 <p><b>Contact us</b> <br></br> we usually respond before 24 hours</p>
-                <input type="text" />
-                <input type="text" />
-                <textarea name="" id="" cols={10} rows={10}></textarea>
+                <input type="text" name='topic' placeholder='onderwerp' />
+                <input type="email" name='email' placeholder='e.g example@email.com' />
+                <textarea name="message" placeholder='bericht' id="message" cols={10} rows={10}></textarea>
                 <button>Submit</button>
             </form>
             <div className="c-contact__info">

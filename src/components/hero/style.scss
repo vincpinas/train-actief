@@ -19,7 +19,7 @@
             margin: 0;
         }
 
-        a {
+        a, button {
             @include gbutton;
         }
     }
